@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tswars/static/css/main.a617e044.chunk.css",
+    "main.js": "/tswars/static/js/main.a130da7e.chunk.js",
+    "main.js.map": "/tswars/static/js/main.a130da7e.chunk.js.map",
+    "runtime-main.js": "/tswars/static/js/runtime-main.3f9fb308.js",
+    "runtime-main.js.map": "/tswars/static/js/runtime-main.3f9fb308.js.map",
+    "static/js/2.45a16e33.chunk.js": "/tswars/static/js/2.45a16e33.chunk.js",
+    "static/js/2.45a16e33.chunk.js.map": "/tswars/static/js/2.45a16e33.chunk.js.map",
+    "static/js/3.07244998.chunk.js": "/tswars/static/js/3.07244998.chunk.js",
+    "static/js/3.07244998.chunk.js.map": "/tswars/static/js/3.07244998.chunk.js.map",
+    "index.html": "/tswars/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/tswars/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.45a16e33.chunk.js.LICENSE.txt": "/tswars/static/js/2.45a16e33.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/tswars/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f9fb308.js",
+    "static/js/2.45a16e33.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.a130da7e.chunk.js"
+  ]
+}
