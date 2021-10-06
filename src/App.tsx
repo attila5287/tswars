@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import { useEffect } from "react";
+import { useState } from "react";
+import Char from "./components/Char";
+import { Results,CharType } from "./types";
+import Loading from "./components/Loading";
 
 function App() {
+  const [chars, setChars] = useState<CharType[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const getChars = async () => {
+    setLoading(true);
+    try {
+      const { data } = await axios.get<Results>(
+        "https://swapi.dev/api/people/?search=anakin"
+      );
+      setChars(data.results);
+    } catch {
+      console.log("err char fetch swapi");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getChars();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Loading loading={loading}>
+        {chars.map((char) => {
+          return <Char key={char.name} char={char} />;
+        })}
+      </Loading>
     </div>
   );
 }
