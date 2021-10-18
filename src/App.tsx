@@ -8,25 +8,26 @@ import {Animated} from 'react-animated-css';
 import "./index.css";
 
 function App() {
+  const [options, setOptions] = useState([]);
   const [chars, setChars] = useState<CharType[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
   const getChars = async (term) => {
-    setLoading(true);
-    try {
+  setLoading(true);
+  try {
       const { data } = await axios.get<Results>(
-        "https://swapi.dev/api/people/?search=" + term
+    "https://swapi.dev/api/people/?search=" + term
       );
       setChars(data.results);
-    } catch {
+  } catch {
       console.log("err char fetch swapi");
-    } finally {
+  } finally {
       setLoading(false);
-    }
+  }
   };
   // Loads all books and sets them to books
-    function handleInputChange (event) {
-    const q = event
+  function handleInputChange (event) {
+  const q = event
       .target
       .value
       .trim()
@@ -35,42 +36,40 @@ function App() {
 
   };
   useEffect(() => {
-    getChars('anakin');
+  getChars('anakin');
   }, []);
 
   return (
 <>              <nav className="navbar navbar-expand navbar-dark bg-primary">
-                <div className="btn btn-outline-info disabled my-2 my-sm-0 btn-lg text-nowrap">
+        <div className="btn btn-outline-info disabled my-2 my-sm-0 btn-lg text-nowrap">
               <i className='fab fa-rebel mx-2'></i>
               <i className='fab fa-empire mx-2'></i>
-                </div>                  
-              <select className='form-control' onChange={ (event) => handleInputChange(event) }>
-                  <option value="" key="0" hidden>...</option>
-                  <option value="anakin" key="1">anakin</option>
+        </div>                  
+              <select className='form-select' onChange={ (event) => handleInputChange(event) }>
+                  <option value="anakin" key="1" selected>anakin</option>
                   <option value="luke" key="2">luke</option>
           </select>
                   
               </nav>
-    <div className='container pt-2'>
+  <div className='container pt-2'>
           <Loading loading={ loading }>
 
-        {chars.map((char,i) => {
-            return (
-                              <Animated
-				animationIn='bounceInLeft'
-				animationOut='bounceInLeft'
-				isVisible={true}
-                    animationInDelay={ 500 }
-                        key={ i }
-                    
-              >
-                <Char key={ char.name } char={ char } />
-                    
-              </Animated>
-            );
-        }) }
+    {chars.map((char,i) => {
+        return (
+          <Animated
+            animationIn='fadeIn'
+            animationOut='bounceInLeft'
+            isVisible={true}
+            animationInDelay={ 500 }
+            animationInDuration={ 2500 }
+            key={ i }
+          >
+          <Char key={ char.name } char={ char } />
+          </Animated>
+      );
+    }) }
       </Loading>
-    </div></>
+  </div></>
   );
 }
 
