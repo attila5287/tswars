@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/tswars/static/css/main.03291b09.chunk.css",
-    "main.js": "/tswars/static/js/main.536d9e61.chunk.js",
-    "main.js.map": "/tswars/static/js/main.536d9e61.chunk.js.map",
+    "main.css": "/tswars/static/css/main.5740ba76.chunk.css",
+    "main.js": "/tswars/static/js/main.6dde3bd8.chunk.js",
+    "main.js.map": "/tswars/static/js/main.6dde3bd8.chunk.js.map",
     "runtime-main.js": "/tswars/static/js/runtime-main.743db224.js",
     "runtime-main.js.map": "/tswars/static/js/runtime-main.743db224.js.map",
     "static/css/2.dce6f7e6.chunk.css": "/tswars/static/css/2.dce6f7e6.chunk.css",
-    "static/js/2.20870488.chunk.js": "/tswars/static/js/2.20870488.chunk.js",
-    "static/js/2.20870488.chunk.js.map": "/tswars/static/js/2.20870488.chunk.js.map",
+    "static/js/2.007b84f4.chunk.js": "/tswars/static/js/2.007b84f4.chunk.js",
+    "static/js/2.007b84f4.chunk.js.map": "/tswars/static/js/2.007b84f4.chunk.js.map",
     "static/js/3.801af899.chunk.js": "/tswars/static/js/3.801af899.chunk.js",
     "static/js/3.801af899.chunk.js.map": "/tswars/static/js/3.801af899.chunk.js.map",
     "index.html": "/tswars/index.html",
     "static/css/2.dce6f7e6.chunk.css.map": "/tswars/static/css/2.dce6f7e6.chunk.css.map",
-    "static/css/main.03291b09.chunk.css.map": "/tswars/static/css/main.03291b09.chunk.css.map",
-    "static/js/2.20870488.chunk.js.LICENSE.txt": "/tswars/static/js/2.20870488.chunk.js.LICENSE.txt"
+    "static/css/main.5740ba76.chunk.css.map": "/tswars/static/css/main.5740ba76.chunk.css.map",
+    "static/js/2.007b84f4.chunk.js.LICENSE.txt": "/tswars/static/js/2.007b84f4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.743db224.js",
     "static/css/2.dce6f7e6.chunk.css",
-    "static/js/2.20870488.chunk.js",
-    "static/css/main.03291b09.chunk.css",
-    "static/js/main.536d9e61.chunk.js"
+    "static/js/2.007b84f4.chunk.js",
+    "static/css/main.5740ba76.chunk.css",
+    "static/js/main.6dde3bd8.chunk.js"
   ]
 }
