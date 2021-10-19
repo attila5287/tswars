@@ -74,10 +74,10 @@ function App() {
           </select>
                   
       </nav>
-          <p>
-              <i className='fas fa-question-circle mx-3'></i>
-              Use
-          </p>
+        <p>
+            <i className='fas fa-question-circle mx-3'></i>
+            Use search bar on the left to fetch multiple characters then optionally choose a specific one amongst results  
+        </p>
   <div className='container pt-2'>
           <Loading loading={ loading }>
 
