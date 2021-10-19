@@ -61,20 +61,23 @@ function App() {
   }, []);
 
   return (
-<>              <nav className="navbar navbar-expand navbar-dark bg-primary">
-        <div className="btn btn-outline-info disabled my-2 my-sm-0 btn-lg text-nowrap">
-              <i className='fab fa-rebel mx-2'></i>
-              <i className='fab fa-empire mx-2'></i>
+<>              <nav className="navbar navbar-expand navbar-dark bg-primary pt-0 pb-1">
+        <div className="btn btn-outline-warning disabled my-2 my-sm-0 btn-lg text-nowrap">
+              <h1 className='fab fa-galactic-republic mx-2 my-0'></h1>
+              <h1 className='fab fa-old-republic mx-2 my-0'></h1>
         </div>                  
               <input className='form-group form-control-dark h-100 m-0' onChange={ (event) => handleInputChange(event) } defaultValue='skywalker'/>
           <select className='form-select' onChange={ (event) => handleInputChange(event) } defaultValue='anakin'>
               { options.map((o, i) => (
               <option value={o} key={i}>{o}</option>
-                  
               ))}
           </select>
                   
-              </nav>
+      </nav>
+          <p>
+              <i className='fas fa-question-circle mx-3'></i>
+              Use
+          </p>
   <div className='container pt-2'>
           <Loading loading={ loading }>
 
