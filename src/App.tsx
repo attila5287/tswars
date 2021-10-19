@@ -49,6 +49,7 @@ function App() {
       .trim()
       console.log(`>> q`, q)
       getChars(q)
+      getOptions(q)
 
   };
   useEffect(() => {

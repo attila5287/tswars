@@ -75,9 +75,11 @@ const Char : FunctionComponent < ICharProps > = (props) => {
                             species : {char
                                 .species
                                 .map(s => (
-                                    <p key={s}>
-                                        <a href={s}>{s}</a>
-                                    </p>
+                                    <i key={s}>
+                                        <a href={s} className='text-warning'>
+                                            <i className='fas fa-dna mx-1'></i>
+                                            {s.split('/')[5]}</a>
+                                    </i>
                                 ))}</li>
                         <li className='list-group-item'>
                             vehicles : {char
