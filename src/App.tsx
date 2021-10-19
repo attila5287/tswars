@@ -12,6 +12,7 @@ function App() {
   const [chars, setChars] = useState<CharType[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
+
   const getChars = async (term) => {
   setLoading(true);
   try {
