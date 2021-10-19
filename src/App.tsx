@@ -8,11 +8,26 @@ import {Animated} from 'react-animated-css';
 import "./index.css";
 
 function App() {
-  const [options, setOptions] = useState([]);
+  const [options, setOptions] = useState<string[]>([]);
   const [chars, setChars] = useState<CharType[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
 
+  const getOptions = async (term) => {
+      setLoading(true);
+      try {
+          const opts = await axios.get<Results>(
+        "https://swapi.dev/api/people/?search=" + term
+          )
+          console.log(`opts`, opts.data.results.map(r => r.name))
+          setOptions(opts.data.results.map(r => r.name));
+      } catch (error) {
+          console.log(`error`, error)
+      } finally {
+          setLoading(false);
+      }
+  }
+    
   const getChars = async (term) => {
   setLoading(true);
   try {
@@ -37,7 +52,11 @@ function App() {
 
   };
   useEffect(() => {
-  getChars('anakin');
+  getOptions('skywalker');
+  }, []);
+    
+  useEffect(() => {
+  getChars('skywalker');
   }, []);
 
   return (
@@ -46,9 +65,12 @@ function App() {
               <i className='fab fa-rebel mx-2'></i>
               <i className='fab fa-empire mx-2'></i>
         </div>                  
-              <select className='form-select' onChange={ (event) => handleInputChange(event) }>
-                  <option value="anakin" key="1" selected>anakin</option>
-                  <option value="luke" key="2">luke</option>
+              <input className='form-group form-control-dark h-100 m-0' onChange={ (event) => handleInputChange(event) } defaultValue='skywalker'/>
+          <select className='form-select' onChange={ (event) => handleInputChange(event) } defaultValue='anakin'>
+              { options.map((o, i) => (
+              <option value={o} key={i}>{o}</option>
+                  
+              ))}
           </select>
                   
               </nav>

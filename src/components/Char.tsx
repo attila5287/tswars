@@ -61,15 +61,14 @@ const Char : FunctionComponent < ICharProps > = (props) => {
                             edited : {helpers.formatDate(char.edited)}</li>
                         <li className='list-group-item'>
                             homeworld :
-                            <a href={char.homeworld} className='text-info'>
-                                <i className="fas fa-external-link-alt"></i>
+                            <a href={char.homeworld} className='text-warning'>
+                                <i className="fas fa-globe"></i>
                             </a>
                         </li>
                         <li className='list-group-item'>
                             url :
-                            <a href={char.url} className='text-info'>
+                            <a href={char.url} className='text-warning'>
                                 <i className="fas fa-external-link-alt"></i>
-
                             </a>
                         </li>
                         <li className='list-group-item'>
@@ -85,8 +84,8 @@ const Char : FunctionComponent < ICharProps > = (props) => {
                                 .vehicles
                                 .map(v => (
                                     <i key={v}>
-                                        <a href={v} className='text-info'>
-                                            <i className='fas fa-space-shuttle mx-2'></i>
+                                        <a href={v} className='text-warning'>
+                                            <i className='fas fa-space-shuttle mx-1'></i>
                                             {v.split('/')[5]}</a>
                                     </i>
                                 ))}</li>
@@ -95,8 +94,8 @@ const Char : FunctionComponent < ICharProps > = (props) => {
                                 .starships
                                 .map(s => (
                                     <i key={s}>
-                                        <a href={s} className='text-info'>
-                                            <i className="fas fa-rocket mx-2"></i>
+                                        <a href={s} className='text-warning'>
+                                            <i className="fas fa-rocket mx-1"></i>
                                             {s.split('/')[5]}</a>
                                     </i>
                                 ))}</li>
@@ -105,8 +104,8 @@ const Char : FunctionComponent < ICharProps > = (props) => {
                                 .films
                                 .map(f => (
                                     <i key={f}>
-                                        <a href={f} className='text-info'>
-                                            <i className="fas fa-film mx-2"></i>
+                                        <a href={f} className='text-warning'>
+                                            <i className="fas fa-film mx-1"></i>
                                             {f.split('/')[5]}</a>
                                     </i>
                                 ))}</li>
@@ -114,7 +113,7 @@ const Char : FunctionComponent < ICharProps > = (props) => {
                 </Animated>
             </div>
             <p className='text-center text-warning my-5'>
-                <i className="fas fa-info-circle mx-2"></i>
+                <i className="fas fa-info-circle mx-1"></i>
                 <i>
                     created : {helpers.formatDate(char.created)}
                 </i>
