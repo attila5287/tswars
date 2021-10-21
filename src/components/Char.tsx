@@ -16,7 +16,7 @@ const Char : FunctionComponent < ICharProps > = (props) => {
                 animationIn='fadeIn'
                 animationOut='bounceOut'
                 isVisible={true}
-                animationInDelay={500}>
+                >
                 <h1 className='text-warning d-flex flex-row justify-content-between my-5'>
                     <i className='text-2xl fab fa-rebel'></i>
                     <i className='text-capitalize'>
@@ -30,7 +30,6 @@ const Char : FunctionComponent < ICharProps > = (props) => {
                     animationIn='flipInY'
                     animationOut='bounceInLeft'
                     isVisible={true}
-                    animationInDelay={750}
                     className='w-100'>
                     <ul className='h-100 w-100 list-group text-center text-uppercase'>
                         <li className='list-group-item'>
@@ -53,7 +52,6 @@ const Char : FunctionComponent < ICharProps > = (props) => {
                     animationIn='flipInY'
                     animationOut='bounceInLeft'
                     isVisible={true}
-                    animationInDelay={1500}
                     className='w-100'>
                     <ul className='h-100 w-100 list-group text-center text-uppercase'>
 

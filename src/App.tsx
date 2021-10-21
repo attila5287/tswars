@@ -60,26 +60,33 @@ function App() {
   getChars('skywalker');
   }, []);
 
-  return (
-<>              <nav className="navbar navbar-expand navbar-dark bg-primary pt-0 pb-1">
-        <div className="btn btn-outline-warning disabled my-2 my-sm-0 btn-lg text-nowrap">
-              <h1 className='fab fa-galactic-republic mx-2 my-0'></h1>
-              <h1 className='fab fa-old-republic mx-2 my-0'></h1>
+    return (
+        <div>
+            <nav className="navbar navbar-expand navbar-dark bg-primary pt-0 pb-1">
+                <div className='mini d-flex flex-row'>
+        <div className="btn btn-lg btn-outline-warning disabled my-sm-0 text-nowrap border-none">
+              <h1 className='fas fa-text-height'></h1>
+        </div>
+        <input className='w-100 form-control-dark shadow-none form-control-lg text-uppercase' onChange={ (event) => handleInputChange(event) } defaultValue='skywalker'/>
+        <div className="btn btn-lg btn-outline-warning disabled my-sm-0 text-nowrap border-none">
+              <h1 className='fab fa-react fa-spin'></h1>
         </div>                  
-              <input className='form-group form-control-dark h-100 m-0' onChange={ (event) => handleInputChange(event) } defaultValue='skywalker'/>
-          <select className='form-select' onChange={ (event) => handleInputChange(event) } defaultValue='anakin'>
+          <select className='w-100 form-group form-select' onChange={ (event) => handleInputChange(event) } defaultValue='anakin'>
               { options.map((o, i) => (
               <option value={o} key={i}>{o}</option>
               ))}
-          </select>
-                  
+          </select>                    
+</div>
       </nav>
+      <div className='mini'>
+
+                  
         <p>
             <i className='fas fa-question-circle mx-3'></i>
-            Use search bar on the left to fetch multiple characters then optionally choose a specific one amongst results  
+            Type star wars character name and use dropdown menu to select a specific 
         </p>
   <div className='container pt-2'>
-          <Loading loading={ loading }>
+    <Loading loading={ loading }>
 
     {chars.map((char,i) => {
         return (
@@ -87,8 +94,7 @@ function App() {
             animationIn='fadeIn'
             animationOut='bounceInLeft'
             isVisible={true}
-            animationInDelay={ 500 }
-            animationInDuration={ 2500 }
+            animationInDelay={ i*1000 }
             key={ i }
           >
           <Char key={ char.name } char={ char } />
@@ -96,7 +102,8 @@ function App() {
       );
     }) }
       </Loading>
-  </div></>
+  </div></div>
+    </div> 
   );
 }
 

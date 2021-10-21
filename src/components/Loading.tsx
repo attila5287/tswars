@@ -10,17 +10,18 @@ const Loading: FunctionComponent<ILoadingProps> = (props) => {
   const { loading } = props;
 
   if (loading) {
-      return <div className=''>
-          <h1 className='fas fa-spinner fa-pulse mx-2'>
+      return <div className='d-flex flex-row justify-content-center'>
+          <h1 className='midi fas fa-spinner fa-pulse'>
           </h1>
           <Animated
-            animationIn='fadeIn'
+            animationIn='slideInRight'
             animationOut='bounceOut'
             isVisible={true}
-            ></Animated>
-          <h1>
+          >
+          <h2>
           Loading...
-          </h1>
+          </h2>
+          </Animated>
       </div>;
   }
 
