@@ -79,11 +79,9 @@ function App() {
 </div>
       </nav>
       <div className='mini'>
-
-                  
         <p>
             <i className='fas fa-question-circle mx-3'></i>
-            Type star wars character name and use dropdown menu to select a specific 
+            Type star wars character name and use dropdown menu to select a specific result
         </p>
   <div className='container pt-2'>
     <Loading loading={ loading }>

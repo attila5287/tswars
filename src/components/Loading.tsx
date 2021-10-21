@@ -11,7 +11,7 @@ const Loading: FunctionComponent<ILoadingProps> = (props) => {
 
   if (loading) {
       return <div className='d-flex flex-row justify-content-center'>
-          <h1 className='midi fas fa-spinner fa-pulse'>
+          <h1 className='midi fas fa-spinner fa-pulse mx-2'>
           </h1>
           <Animated
             animationIn='slideInRight'
