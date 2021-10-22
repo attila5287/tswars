@@ -50,8 +50,8 @@ function App() {
       console.log(`>> q`, q)
       getChars(q)
       getOptions(q)
-
-  };
+    };
+    
   useEffect(() => {
   getOptions('skywalker');
   }, []);
@@ -76,16 +76,25 @@ function App() {
               <option value={o} key={i}>{o}</option>
               ))}
           </select>                    
-</div>
+        </div>
       </nav>
       <div className='mini'>
         <p>
-            <i className='fas fa-question-circle mx-3'></i>
-            Type star wars character name and use dropdown menu to select a specific result
-        </p>
+            <i className='fas fa-search mx-2'></i>
+            <b> Use text bar to perform a search</b>  (optional next step: use dropdown menu to bring a specific result.)
+            </p>
+            <p>
+                <span className='fas fa-angle-right mx-2'></span>
+                Show me the code (TypeScript/React):  
+                <a href="https://github.com/attila5287/tswars/" className='text-info'>
+                    <i className='fab fa-github'> attila5287</i> </a>
+                <span className='fas fa-angle-right mx-2'></span> Visit on gh-pages:  
+                <a href="https://attila5287.github.io/tswars/"  className='text-info'>
+                        <i className='fab fa-safari mx-1'> </i>
+                        tswars</a>
+            </p>
   <div className='container pt-2'>
     <Loading loading={ loading }>
-
     {chars.map((char,i) => {
         return (
           <Animated
@@ -99,8 +108,9 @@ function App() {
           </Animated>
       );
     }) }
-      </Loading>
-  </div></div>
+    </Loading>
+            </div>
+        </div>
     </div> 
   );
 }
